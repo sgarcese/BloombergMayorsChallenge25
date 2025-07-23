@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fall Demo Traffic Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fall Demonstration Project Dashboard</h1>
+    <p>Compare traffic metrics before and after for each school</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-school="wvhs">West Valley High School</button>
+    <button class="tab" data-school="hhs">Hutchison High School</button>
+  </div>
+
+  <div class="controls">
+    <label for="period">Select Period:</label>
+    <select id="period">
+      <option value="am">AM Arrival</option>
+      <option value="pm">PM Dismissal</option>
+    </select>
+
+    <label for="metric">Select Metric:</label>
+    <select id="metric">
+      <option value="ttt">Total Travel Time (hr)</option>
+      <option value="delay">Total Delay (hr)</option>
+      <option value="avgDelay">Avg Delay per Vehicle (sec)</option>
+      <option value="stops">Total Vehicle Stops</option>
+      <option value="fuel">Fuel Used (gal)</option>
+      <option value="hc">Hydrocarbons (g)</option>
+      <option value="co">Carbon Monoxide (g)</option>
+      <option value="nox">Nitrous Oxides (g)</option>
+    </select>
+  </div>
+
+  <canvas id="metricsChart"></canvas>
+
+  <footer>
+    <p>Based on Synchro/SimTraffic simulations – Jan 2025</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
